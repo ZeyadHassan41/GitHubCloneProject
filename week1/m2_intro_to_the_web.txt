@@ -1,0 +1,275 @@
+How does the web work:-
+The web is like a giant interconnected network of computers, and it’s how we access information and services 
+on the internet. Here’s a simple explanation of how it works:
+
+    - Websites: A website is a collection of related web pages. Each web page contains different information,
+    like text, images, and videos.
+
+    - Web Browser: To access websites, we use a web browser, like Chrome, Firefox, or Safari. It’s a program 
+    on our computer or device that lets us view web pages.
+
+    - Web Pages: Web pages are like digital documents. They are written using a special language called HTML, 
+    which stands for Hypertext Markup Language. HTML uses tags to structure and format the content on the page.
+
+    - Web Addresses: Every web page has a unique address called a URL, which stands for Uniform Resource 
+    Locator. It’s like a street address for a web page. We type the URL in the browser’s address bar to 
+    visit a specific web page.
+
+    - Web Servers: When we visit a website, the web browser sends a request to a web server. A web server is 
+    a powerful computer that stores the website’s files and sends them back to our browser.
+
+    - Communication: The browser and the server communicate using a language called HTTP, which stands for 
+    Hypertext Transfer Protocol. It’s a set of rules that allows them to understand each other and exchange 
+    information.
+
+    - Rendering: Once the browser receives the web page files from the server, it interprets the HTML code 
+    and displays the content on our screen. It also uses CSS (Cascading Style Sheets) to control the 
+    appearance and layout of the web page.
+
+    - Clicking Links: Web pages often have clickable links that take us to other web pages. These links 
+    allow us to navigate between different websites and explore more information.
+
+    - Internet Connection: To access the web, we need an internet connection. It’s like a highway that 
+    connects our computer or device to the web servers where websites are stored.
+
+    - Web Search: When we want to find specific information or websites, we can use search engines like 
+    Google or Bing. We type in keywords related to what we’re looking for, and the search engine shows us 
+    a list of relevant web pages.
+
+
+An overview of the Internet
+
+    The local network of devices in your home is connected to the hardware (network of computers) outside 
+    with the help of the modem and the wireless router.
+
+    Your modem is connected to your Internet Service Provider (ISP) through underground copper cables that 
+    eventually connect to fiber optic cables.
+
+    The ISP may either have single or multiple regional and national networks that connect and supply to 
+    different cities in the country. These networks apart from connecting within a country also connect to 
+    other countries.
+
+    The infrastructure is also an inter-continental connection of networks made possible by underwater fiber 
+    optic cables provided by many different cable companies across the world.
+
+    This infrastructure that makes up the internet is what makes sharing information possible. Staggering 
+    isn’t it?
+
+Cutting to the chase - The World Wide Web
+    The web that is built on top of the internet allows users to access information. All of it boils down 
+    to a “Client and Server” interaction.
+
+    Client
+        A client is your desktop, laptop, or mobile device that you use to connect to the web. Also, the 
+        web browser (Chrome, Firefox, Brave, etc) in your device that you make use of to access the web, 
+        could be considered a client.
+
+        The client is responsible for making “requests” for resources on a server. This is usually 
+        accomplished by typing in a URL or clicking on links within your browser. A resource could be any 
+        file like a web/HTML page, an image, a video, or any file type.
+
+    Server
+        A server is a computer that hosts the resources (web pages, videos, images, etc) of a website. It 
+        “responds” to “requests” made by the client and delivers the resource to the client.
+
+
+Domain Names
+    https://www.google.com/
+    Here, google.com is the “domain name” of the website. A domain name has a few parts to it, each separated by a period.
+
+    The “google” portion of “google.com” refers to the name of the website. It is called the Secondary Level Domain(SLD)
+
+    The “.com” portion of “google.com” is called the Top Level Domain (TLD) and it gives you an idea of what sort of an 
+    entity the organization behind the website is. Entities could be commercial (.com), government organizations (.gov), 
+    educational institutions (.edu) etc. There are also Country code TLDs - “.in” for India, “.fr” for France, “.hk” for 
+    Hong Kong and so on.
+
+DNS
+    The IP address serves to be an identifier for a device or a computer, so it can identify and talk with another device 
+    on the internet. An IP address is a set of four numbers each separated by a period. An example would be 192.154.23.10. 
+    Each number in the set can have a maximum value of “255”. That means an IP address could range from 0.0.0.0 to 
+    255.255.255.255. This version of IP addressing is called “IPv4”. It allows for a combination of 4 billion IP addresses.
+
+    Every website or application (server hosting the website) we visit would have an IP address tied to it.  Imagine 
+    having to type out an IP address on the address bar of your browser for every website rather than having to type its 
+    name, like facebook.com or google.com. It would be humanly impossible to remember IP addresses for all websites.
+
+    This is where the Domain Name System or DNS comes as such a boon. The DNS allows for assigning human readable “names” 
+    to an IP address. This makes our lives easy. So what actually happens is that, once a request for a website is fired 
+    on your browser, the Domain Name System works behind the scenes to resolve the name of the website to its corresponding 
+    IP address.
+
+Connecting to the website (name resolution by DNS)
+
+    1. Let’s say, you either type the name of the website or click the link https://www.google.com on your browser .
+
+    2. Your browser looks into its cache to check if the IP address for the typed domain name exists. If it doesn’t it asks 
+    the DNS resolver, a software in your operating system, for the same. If the answer is no again, your browser 
+    communicates with the “local DNS server”, this being commonly your Internet Service Provider (ISP), for requesting the 
+    address for www.google.com.
+
+    3. If the local DNS server does not have the IP address for the domain name in its cache, it requests a server called 
+    the “root name server” for the same. The root name server stores information of all “Top Level Domain (TLD) name 
+    servers”. Since the TLD in your case is “.com”, it returns the IP address of the “.com” TLD name server to your local 
+    DNS server.
+
+    4. The local DNS server requests the “.com” TLD name server for the address of the domain name and the TLD name server 
+    responds with the address for the “name server” of the domain requested.
+
+    4. After reaching out to the name server of the domain requested, it responds with the IP address of the “web server” 
+    of the domain www.google.com.
+
+    5. The local DNS server finally responds to your browser with the IP address of the domain requested.
+
+    6. Once the IP address of www.google.com is resolved, your browser establishes a socket connection with the server of 
+    www.google.com.
+
+    7. Your browser shoots a request to the corresponding IP address (www.google.com).
+
+A socket connection is a communication channel between two devices (like your computer and a server) over a network, allowing them to send and receive data.
+
+What is a Socket?
+    A socket is an endpoint of a two-way communication link between two programs running on a network. It is created 
+    using:
+
+        IP address: identifies the machine.
+
+        Port number: identifies the specific application/service on that machine.
+
+        Think of a socket as a virtual plug that connects two devices over the internet so they can talk to each other.
+
+     Types of Sockets
+        1. Stream Sockets (TCP)
+            Based on the TCP protocol (Transmission Control Protocol).
+            
+            Ensures:
+                Reliable data delivery
+                Ordered delivery
+                Error-checking
+
+            Used in web browsing (HTTP/HTTPS), email, file transfer, etc.
+
+2. Datagram Sockets (UDP)
+    Based on UDP protocol (User Datagram Protocol).
+    Faster, but no guarantee of delivery, order, or error checking.
+    Used in gaming, live video/audio streaming, DNS, etc.
+
+    ⚙️ How a Socket Connection Works (TCP example)
+    1. Socket Creation
+    Both the client and server create a socket in their programs.
+
+    2. Connection Establishment (3-Way Handshake in TCP)
+        Client → Server: sends SYN (synchronize)
+
+        Server → Client: responds with SYN-ACK
+
+        Client → Server: replies with ACK
+        ✅ Now the connection is established.
+
+    3. Data Transfer
+        The client and server can now send and receive data over the socket.
+
+        Example: you send a login request, server sends a response.
+
+    4. Connection Termination
+        Either side can close the socket when done.
+
+        This uses a 4-step FIN/ACK exchange in TCP.
+
+Now, contrary to believing that the whole webpage is loaded in the browser with a single response from the server, 
+it actually takes multiple requests from the browser to load a single webpage.
+Once the server responds, the browser parses the returned HTML (from the response) and may come across other resources 
+like image files, CSS files and Javascript files. For each resource encountered, the browser will fire another request 
+to the server and receive a response.
+A single web page is usually a sum of several HTTP requests and responses.
+
+A note on types of servers
+    If you have come this far, you may want to believe that there is a single web server that does all the heavy lifting 
+    behind the scenes. This may be true for a small website. However, in the real world, popular websites get millions of 
+    requests per second and would find it difficult to handle several million requests per second. Servers apart from 
+    handling requests, also have to run web application software and handle tons of data.
+
+    Servers are split into different types based on functionality in order to making handling of requests easier. Some of 
+    these types may include,
+
+        Web server - This server machine only handles the incoming HTTP requests. Eg- Apache.
+
+        Application server - An application server is responsible for running the software of the web application written 
+        with back-end programming languages like PHP, Ruby on Rails or Python.
+
+        Database server - This runs the Database Management system such as SQL, MySQL or MongoDB. This is where the data 
+        resides.
+
+
+Web development terminologies
+    Here are some terminologies that you need to familiarize
+
+    1. HTML (Hypertext Markup Language):
+    HTML is the standard markup language used to structure the content of web pages. It provides a set of tags and elements
+    that define the structure and layout of a web page.
+
+    2. CSS (Cascading Style Sheets):
+    CSS is a stylesheet language that is used to describe the presentation and styling of HTML documents. It enables you to 
+    control the colors, fonts, layouts, and other visual aspects of a web page.
+
+    3. JavaScript:
+    JavaScript is a programming language that allows you to add interactivity and dynamic behavior to web pages. It enables 
+    you to create interactive forms, perform calculations, manipulate the content on a page, and much more.
+
+    4. Front-end Development:
+    Front-end development refers to the process of creating the user-facing part of a website or web application. It 
+    involves writing HTML, CSS, and JavaScript code to build the visual and interactive components that users interact with.
+
+    5. Back-end Development:
+    Back-end development focuses on the server-side of web development. It involves handling data storage, managing 
+    databases, and implementing server-side logic to support the functionality of a web application.
+
+    6. Responsive Design:
+    Responsive design is an approach to web development that ensures a website or web application looks and functions well
+    on different devices and screen sizes. It involves using CSS media queries and flexible layouts to adapt the content 
+    for optimal viewing on desktops, tablets, and mobile devices.
+
+    7. Version Control:
+    Version control is a system that tracks and manages changes to files and code over time. It allows multiple developers 
+    to collaborate on a project, keep track of different versions of the code, and revert to previous versions if needed. 
+    Git is a popular version control system widely used in web development.
+
+    8. IDE (Integrated Development Environment):
+    An IDE is a software application that provides a comprehensive set of tools for coding and developing web applications. 
+    It includes features such as code editors, debugging tools, and project management capabilities to streamline the 
+    development process.
+
+    9. Wireframing:
+    Wireframing is the process of creating a visual representation or blueprint of a web page or application’s structure. 
+    It helps in planning the layout, content organization, and user interface before diving into the actual design and 
+    development.
+
+    10. Deployment:
+    Deployment refers to the process of making a website or web application accessible to users on the internet. It 
+    involves configuring servers, setting up hosting environments, and transferring files to a live server so that the 
+    website can be accessed globally.
+
+These are just a few of the many terminologies you’ll encounter in web development. As you progress, you’ll become more 
+familiar with these terms and gain a deeper understanding of their significance in building web projects.
+
+    3 important terms that you will hear about often
+        1. Web Page:
+        A web page is a single document or file within a website that is displayed in a web browser. It contains a 
+        combination of HTML, CSS, and JavaScript code that defines the structure, design, and functionality of the 
+        content. Web pages can include text, images, videos, links, forms, and other elements that provide information 
+        or allow user interaction.
+
+        2. Website:
+        A website is a collection of related web pages that are hosted on a web server and can be accessed by users through 
+        a web browser. It typically consists of various interconnected pages that share a common domain or URL. Websites can
+        be static, providing informational content, or dynamic, offering interactive features and functionality.
+
+        3. Web App (Web Application):
+        A web app, short for web application, is a type of software application that runs on a web server and is accessed 
+        through a web browser. Unlike static web pages, web apps are more interactive and dynamic, offering functionality 
+        similar to traditional desktop or mobile applications. They can perform complex tasks, process user input, store 
+        data, and provide a customized user experience.
+
+Web apps often rely on a combination of front-end technologies (HTML, CSS, JavaScript) and back-end technologies 
+(server-side programming languages, databases) to handle user interactions, data processing, and server communication. 
+Examples of web apps include online banking systems, social media platforms, e-commerce websites, and productivity tools.
